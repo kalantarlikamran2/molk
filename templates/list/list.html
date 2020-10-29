@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+  {% block body %}
+
+
+<section class="ftco-section bg-light ftco-bread">
+				<div class="conta% if x.image %} iner">
+					<div class="row no-gutters slider-text align-items-center">
+	          <div class="col-md-9 ftco-animate">
+	            <p class="breadcrumbs"><span class="mr-2"><a href="#">AzTU</a></span> <span>Tələbələr</span></p>
+	            <h1 class="mb-3 bread">Veb səhifə hazırlanması</h1>
+	            <p>Tələbənin doğulduğu yaşayış məntəqəsi haqqında məlumatı əks etdirilməlidir.</p>
+	          </div>
+	        </div>
+				</div>
+			</section>
+<section class="ftco-section">
+	    	<div class="container">
+
+	    				<div class="row">
+                            {% for x in post %}
+			    		<div class="col-md-6 col-lg-3 ftco-animate">
+							<div class="staff">
+                               	{% load static%}
+							{% if x.image %}
+							<img src="{{x.image}}" alt="IMG-PRODUCT">
+							{% endif %}
+                                </div>
+								<div class="text pt-4">
+									<h3><a href="#">{{x.adi}}  {{x.soyad}}</a></h3>
+									<span class="position mb-2">doğulduğu tarix : <a>{{x.gun}}.{{x.ay}}.{{x.il}}</a></span>
+									<p><span><a>doğulduğu yer</a></span> : {{x.doguldugu}}.</p>
+									<p>yaşayış yeri : {{x.yasayis}}.</p>
+									<p>fakulte : {{x.fakulte}} </p>
+									<p>grup : {{x.grup}}.</p>
+                      <ul class="ftco-social-icon d-flex">
+		                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+		              </ul>
+								</div>
+							</div>
+						</div>
+                            {% endfor %}
+			    		</div><!-- END-->
+			    		<div class="row mt-5">
+			          <div class="col text-center">
+			            <div class="block-27">
+			              <ul>
+			                <li><a href="#">&lt;</a></li>
+			                <li class="active"><span>1</span></li>
+			                <li><a href="#">2</a></li>
+			                <li><a href="#">3</a></li>
+			                <li><a href="#">4</a></li>
+			                <li><a href="#">5</a></li>
+			                <li><a href="#">&gt;</a></li>
+			              </ul>
+			            </div>
+			          </div>
+			        </div>
+			    	</div>
+	    			<!-- END COL -->
+	    		</div>
+	    	</div>
+	    </section>
+
+    {% endblock %}
